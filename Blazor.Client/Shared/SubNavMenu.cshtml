@@ -1,0 +1,20 @@
+﻿@using Microsoft.AspNetCore.Blazor.Components
+<ul>
+    @foreach (var nav in Items)
+    {
+        <li>
+            <NavLink class="jqp-widgets" href="@nav.Item2">
+                @nav.Item1
+            </NavLink>
+        </li>
+    }
+    @*<li class="active">
+            <NavLink class="jqp-widgets" href="fetchdata">
+                Item1
+            </NavLink>
+        </li>*@
+</ul>
+@functions {
+[Parameter]
+List<Tuple<string, string>> Items { get; set; }
+}
